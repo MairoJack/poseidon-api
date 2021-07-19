@@ -19,7 +19,7 @@ public class BaseController<T extends BaseEntity,
         SEARCH extends BaseSearch<T>
         > {
 
-    private final S service;
+    protected final S service;
 
     @GetMapping()
     public R<IPage<T>> page(Page<T> page, SEARCH search) {

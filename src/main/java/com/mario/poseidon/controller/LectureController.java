@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("lectures")
 public class LectureController extends BaseController<Lecture, LectureDTO, LectureService, LectureSearch> {
 
-    private final LectureService service;
 
     public LectureController(LectureService service) {
         super(service);
-        this.service = service;
     }
+
 }
