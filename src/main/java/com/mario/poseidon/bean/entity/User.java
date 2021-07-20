@@ -1,6 +1,7 @@
 package com.mario.poseidon.bean.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mario.poseidon.bean.enums.Sex;
 import com.mario.poseidon.common.BaseEntity;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class User extends BaseEntity {
     /**
      * 密码
      */
+    @JsonIgnore
     private String password;
     /**
      * 真实姓名

@@ -1,4 +1,4 @@
-package com.mario.poseidon.controller;
+package com.mario.poseidon.controller.admim;
 
 import com.mario.poseidon.bean.dto.LectureDTO;
 import com.mario.poseidon.bean.entity.Lecture;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("lectures")
+@RequestMapping("admin/lectures")
 public class LectureController extends BaseController<Lecture, LectureDTO, LectureService, LectureSearch> {
 
 

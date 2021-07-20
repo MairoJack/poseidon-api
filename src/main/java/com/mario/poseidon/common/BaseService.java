@@ -34,7 +34,7 @@ public abstract class BaseService<M extends BaseMapper<T>, T extends BaseEntity,
     }
 
     @Override
-    public T get(Long id) {
+    public T get(Integer id) {
         return Assert.notNull(super.getById(id), () -> new BusinessException(resource + "不存在"));
     }
 
@@ -53,7 +53,7 @@ public abstract class BaseService<M extends BaseMapper<T>, T extends BaseEntity,
 
     @Override
     @Transactional
-    public void modify(Long id, DTO dto) {
+    public void modify(Integer id, DTO dto) {
         T t = get(id);
         checkExist(t, dto);
         BeanUtil.copyProperties(dto, t, false);
@@ -65,7 +65,7 @@ public abstract class BaseService<M extends BaseMapper<T>, T extends BaseEntity,
 
     @Override
     @Transactional
-    public void delete(Long id) {
+    public void delete(Integer id) {
         T t = get(id);
         IDeleteExtend<T> extend = deleteExtend();
         extend.before(t);
@@ -73,7 +73,7 @@ public abstract class BaseService<M extends BaseMapper<T>, T extends BaseEntity,
         extend.after(t);
     }
 
-    protected void isExist(Long id, String column, Object value) {
+    protected void isExist(Integer id, String column, Object value) {
         Assert.isFalse(super.count(Wrappers
                         .<T>query()
                         .eq(column, value)

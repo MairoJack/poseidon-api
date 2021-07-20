@@ -32,7 +32,7 @@ public class BaseController<T extends BaseEntity,
     }
 
     @GetMapping("{id}")
-    public R<T> detail(@PathVariable Long id) {
+    public R<T> detail(@PathVariable Integer id) {
         return R.ok(service.get(id));
     }
 
@@ -43,13 +43,13 @@ public class BaseController<T extends BaseEntity,
     }
 
     @PutMapping("{id}")
-    public R<?> modify(@PathVariable Long id, @RequestBody @Validated DTO dto) {
+    public R<?> modify(@PathVariable Integer id, @RequestBody @Validated DTO dto) {
         service.modify(id, dto);
         return R.ok();
     }
 
     @DeleteMapping("{id}")
-    public R<?> delete(@PathVariable Long id) {
+    public R<?> delete(@PathVariable Integer id) {
         service.delete(id);
         return R.ok();
     }

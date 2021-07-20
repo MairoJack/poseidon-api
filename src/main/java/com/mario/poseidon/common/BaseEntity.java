@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 public class BaseEntity {
 
     @TableId(type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
     /**
      * 创建时间

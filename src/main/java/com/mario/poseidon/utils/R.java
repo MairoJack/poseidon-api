@@ -18,37 +18,31 @@ public class R<T> {
     private String msg;
     private T data;
 
-    public R(ResponseCode responseCode) {
-        this.code = responseCode.getCode();
-        this.msg = responseCode.getMsg();
+    public R(int code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public R(int code, String msg, T data) {
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
     }
 
     public static <T> R<T> ok() {
-        return result(ResponseCode.SUCCESS, null);
+        return new R<>(200, "成功");
     }
 
     public static <T> R<T> ok(T data) {
-        return result(ResponseCode.SUCCESS, data);
+        return new R<>(200, "成功", data);
     }
 
     public static <T> R<T> fail(String msg) {
-        return failResult(ResponseCode.FAIL, msg);
+        return new R<>(300, msg);
     }
 
-    public static <T> R<T> error(ResponseCode responseCode) {
-        return result(responseCode, null);
+    public static <T> R<T> authFail(String msg) {
+        return new R<>(401, msg);
     }
 
-    public static <T> R<T> result(ResponseCode rc, T data) {
-        return new R<T>()
-                .setCode(rc.getCode())
-                .setMsg(rc.getMsg())
-                .setData(data);
-    }
-
-    public static <T> R<T> failResult(ResponseCode rc, String msg) {
-        return new R<T>()
-                .setCode(rc.getCode())
-                .setMsg(msg);
-    }
 }

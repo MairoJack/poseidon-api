@@ -20,7 +20,7 @@
         <maven.compiler.source>13</maven.compiler.source>
         <maven.compiler.target>13</maven.compiler.target>
         <mybatis-plus.version>3.4.3.1</mybatis-plus.version>
-        <hutool.version>5.4.7</hutool.version>
+        <hutool.version>5.7.5</hutool.version>
         <lombok.version>1.18.20</lombok.version>
     </properties>
 
@@ -57,6 +57,12 @@
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.12.4</version>
         </dependency>
 
     </dependencies>

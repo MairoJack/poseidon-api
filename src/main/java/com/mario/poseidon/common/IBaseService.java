@@ -23,7 +23,7 @@ public interface IBaseService<T extends BaseEntity, DTO extends BaseDTO> extends
     /**
      * 详情
      */
-    T get(Long id);
+    T get(Integer id);
 
     /**
      * 新增
@@ -33,10 +33,10 @@ public interface IBaseService<T extends BaseEntity, DTO extends BaseDTO> extends
     /**
      * 修改
      */
-    void modify(Long id, DTO dto);
+    void modify(Integer id, DTO dto);
 
     /**
      * 删除
      */
-    void delete(Long id);
+    void delete(Integer id);
 }
