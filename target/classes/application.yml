@@ -12,7 +12,9 @@ spring:
       max-file-size: 10MB
       max-request-size: 50MB
   main:
-      allow-bean-definition-overriding: true
+    allow-bean-definition-overriding: true
 mybatis-plus:
   type-handlers-package: com.mario.poseidon.component
   mapper-locations: classpath:mapper/*.xml
+jwt:
+  sign: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
