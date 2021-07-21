@@ -2,10 +2,8 @@ package com.mario.poseidon.controller.api;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mario.poseidon.bean.dto.LectureDTO;
 import com.mario.poseidon.bean.entity.Lecture;
 import com.mario.poseidon.bean.search.LectureSearch;
-import com.mario.poseidon.common.BaseController;
 import com.mario.poseidon.service.LectureService;
 import com.mario.poseidon.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;

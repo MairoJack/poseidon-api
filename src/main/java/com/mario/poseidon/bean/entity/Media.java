@@ -1,9 +1,7 @@
 package com.mario.poseidon.bean.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mario.poseidon.bean.enums.MediaType;
-import com.mario.poseidon.bean.enums.Sex;
 import com.mario.poseidon.common.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,10 +1,8 @@
 package com.mario.poseidon.bean.search;
 
-import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.mario.poseidon.bean.entity.Media;
-import com.mario.poseidon.bean.entity.User;
 import com.mario.poseidon.common.BaseSearch;
 import lombok.Getter;
 import lombok.Setter;

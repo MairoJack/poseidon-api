@@ -1,14 +1,8 @@
 package com.mario.poseidon.controller;
 
 import cn.hutool.core.collection.CollUtil;
-import com.mario.poseidon.bean.dto.LectureDTO;
-import com.mario.poseidon.bean.entity.Lecture;
-import com.mario.poseidon.bean.search.LectureSearch;
-import com.mario.poseidon.common.BaseController;
 import com.mario.poseidon.exception.BusinessException;
-import com.mario.poseidon.service.LectureService;
 import com.mario.poseidon.service.MediaService;
-import com.mario.poseidon.service.UserService;
 import com.mario.poseidon.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

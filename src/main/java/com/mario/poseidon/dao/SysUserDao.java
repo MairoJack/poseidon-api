@@ -1,7 +1,6 @@
 package com.mario.poseidon.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mario.poseidon.bean.entity.Lecture;
 import com.mario.poseidon.bean.entity.SysUser;
 
 /**
