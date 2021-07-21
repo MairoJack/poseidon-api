@@ -1,6 +1,7 @@
 package com.mario.poseidon.exception;
 
 import com.mario.poseidon.utils.R;
+import org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -36,5 +37,17 @@ public class GlobalExceptionHandler {
     public R<?> bodyValidExceptionHandler(MethodArgumentNotValidException exception) {
         List<FieldError> fieldErrors = exception.getBindingResult().getFieldErrors();
         return R.fail(fieldErrors.get(0).getDefaultMessage());
+    }
+
+    @ExceptionHandler(value = SizeLimitExceededException.class)
+    @ResponseBody
+    public R<?> sizeLimitExceededException(SizeLimitExceededException exception) {
+        return R.fail("上传文件大小超限");
+    }
+
+    @ExceptionHandler(value = Exception.class)
+    @ResponseBody
+    public R<?> exception(Exception exception) {
+        return R.fail("系统异常");
     }
 }

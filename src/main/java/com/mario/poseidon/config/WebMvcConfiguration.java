@@ -69,7 +69,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(tokenInterceptor)
-                .addPathPatterns("/admin/**", "/api/users/**")
+                .addPathPatterns("/admin/**", "/api/users/**","/medias/**")
                 .excludePathPatterns("/admin/sys_users/login", "/api/users/login", "/api/users/register");
 
     }
