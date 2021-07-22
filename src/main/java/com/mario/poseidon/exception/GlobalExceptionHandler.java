@@ -1,6 +1,7 @@
 package com.mario.poseidon.exception;
 
 import com.mario.poseidon.utils.R;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
@@ -16,6 +17,7 @@ import java.util.List;
 /**
  * @author mario on 2021/7/19.
  */
+@Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -48,6 +50,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public R<?> exception(Exception exception) {
-        return R.fail("系统异常");
+        log.error("系统异常:{}", exception.getMessage());
+        return R.error("系统异常");
     }
 }

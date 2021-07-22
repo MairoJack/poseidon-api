@@ -41,6 +41,10 @@ public class R<T> {
         return new R<>(300, msg);
     }
 
+    public static <T> R<T> error(String msg) {
+        return new R<>(400, msg);
+    }
+
     public static <T> R<T> authFail(String msg) {
         return new R<>(401, msg);
     }

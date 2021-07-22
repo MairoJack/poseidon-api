@@ -32,6 +32,12 @@ public class Lecture extends BaseEntity {
      * 地址
      */
     private String address;
+
+    /**
+     * 主图
+     */
+    private String mainImage;
+
     /**
      * 站点
      */
